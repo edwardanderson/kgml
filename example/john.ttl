@@ -1,0 +1,53 @@
+PREFIX : <http://example.org/>
+PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+
+<http://www.wikidata.org/entity/Q1203>
+    a dct:Agent ;
+    rdfs:label "John" ;
+    :born_on "1940-10-09"^^schema:Date ;
+    :description
+        [
+            :source
+                [
+                    rdfs:label "Wikipedia" ;
+                ] ;
+            rdf:value "<p lang=\"en\">Born in <a href=\"https://en.wikipedia.org/wiki/Liverpool\">Liverpool</a>, Lennon became involved in the <a href=\"https://en.wikipedia.org/wiki/Skiffle_revival\">skiffle craze</a> as a teenager.</p>"^^rdf:HTML ;
+            rdfs:seeAlso
+                <https://en.wikipedia.org/wiki/Liverpool> ,
+                <https://en.wikipedia.org/wiki/Skiffle_revival> ;
+        ] ;
+    :name "John Winston Lennon" ;
+    :portrait <https://shorturl.at/U2cU6> ;
+    :spouse <http://www.wikidata.org/entity/Q117012> ;
+    owl:sameAs <http://vocab.getty.edu/ulan/500106615> ;
+    foaf:knows <http://www.wikidata.org/entity/Q2599> ;
+.
+
+<http://www.wikidata.org/entity/Q117012>
+    a dct:Agent ;
+    rdfs:label "Yoko Ono" ;
+    :name "小野 洋子"@jp ;
+.
+
+<http://www.wikidata.org/entity/Q2599>
+    rdfs:label "Paul" ;
+.
+
+<https://digital.library.ucla.edu/catalog/ark:/21198/zz0002np7z>
+    rdfs:label "Los Angeles Times Photographic Collection" ;
+.
+
+<https://shorturl.at/U2cU6>
+    a dcmitype:Image ;
+    rdfs:label "John Lennon being interviewed in Los Angeles" ;
+    :licence <https://creativecommons.org/licenses/by/4.0/> ;
+    :source <https://digital.library.ucla.edu/catalog/ark:/21198/zz0002np7z> ;
+.
+
+
